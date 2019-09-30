@@ -55,9 +55,9 @@ public class StudentInterFace {
         }
         else System.out.format("%s has the highest score of %d", s2.getName(), s2.getHighScore());
         if(s1.getAverage()>s2.getAverage()){
-            System.out.format("%s has the highest average score of %d", s1.getName(), s1.getAverage());
+            System.out.format("%s has the highest average score of %d\n", s1.getName(), s1.getAverage());
         }
-        else System.out.format("%s has the highest average score of %d", s2.getName(), s2.getAverage());
+        else System.out.format("%s has the highest average score of %d\n", s2.getName(), s2.getAverage());
     }
     
 }

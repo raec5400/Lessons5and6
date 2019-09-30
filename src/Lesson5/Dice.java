@@ -13,6 +13,8 @@ public class Dice {
     private int size;
     private int dotSize;
     private int pos1, pos2, pos3;
+    
+    
 
     public Dice() {
         value = (int) (Math.random() * 6 + 1);
@@ -39,7 +41,7 @@ public class Dice {
 
     public void roll() {
         value = (int) (Math.random() * 6 + 1);
-        // c = null; this was your problem
+        
     }
 
     public int getValue() {
