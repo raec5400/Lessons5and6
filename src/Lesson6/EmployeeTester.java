@@ -8,9 +8,10 @@ public class EmployeeTester {
         e2 = new Employee();
         
         e1.setName("Joey full time");
-        e1.setType(1);
+        System.out.println(e1.setType(1));
         e1.setHours(45);
         e1.setRate(20);
+        System.out.println("Joey full time type is " +e1.getType()); //WONT be 99
         
         e2.setName("Joey part time");
         e2.setType(2);

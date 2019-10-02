@@ -21,11 +21,11 @@ public class StudentInterFace {
             score = s.nextInt();
             s1.setScore(i, score);
         }
-        String em = s1.validateData();
-        if(em == null){
+        String errormsg = s1.validateData();
+        if(errormsg == null){
             break;
         }else {
-            System.out.println(em);
+            System.out.println(errormsg);
         }
     }
         
