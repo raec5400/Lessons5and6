@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Face {
-    private int xPos, yPos, diameter;
+    private int xPos, yPos, newpos, diameter, eyediam;
     private Color color, eyecol;
     private Graphics g;
     
@@ -15,21 +15,41 @@ public class Face {
         //default size and color
         diameter=100;
         color=Color.red;
+        eyecol=Color.yellow;
     }
     
     public void setColor(Color newface, Color neweyes){
         color = newface;
         eyecol = neweyes;
     }
-    
-    public void draw(){
+    public int Move(){
+        newpos=(int)(Math.random()*50+5);
+        newpos=(int)(Math.random()*50+5);
+        return newpos;       
+    }
+    public void Resize(){
         
     }
+    
+    public void draw(){
+        drawHead();
+        drawEyes();
+        drawMouth();
+    }
     private void drawHead(){
-        g.fillOval(xPos, yPos, 25, 25);
+        g.fillOval(xPos, yPos, diameter, diameter);
     }
     private void drawEyes(){
-        g.fillOval(xPos, yPos, 5, 5);
-        g.fillOval(xPos, yPos, 5, 5);
+        g.fillOval(xPos, yPos, eyediam, eyediam);
+        g.fillOval(xPos, yPos, eyediam, eyediam);
+    }
+    private void drawMouth(){
+        g.drawLine(xPos, yPos, xPos, yPos);
+        g.drawLine(xPos, yPos, xPos, yPos);
+        g.drawLine(xPos, yPos, xPos, yPos);
+    }
+    public void erase(){
+        g.setColor(Color.white);
+        g.fillRect(xPos-10, yPos-10, diameter+20, diameter+20);
     }
 }

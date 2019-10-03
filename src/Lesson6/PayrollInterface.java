@@ -59,6 +59,21 @@ Attempt         Data        Expected        Actual
 1               type=0      Type not set    Type not set
 2               type=1      Type set        Type set
 3               type=2      Type set        Type set
-
-
+4               type=3      Type not set    Type not set
+5               type=-1000  Type not set    Type not set
+6               type=1000   Type not set    Type not set
+7               rate=6.74   Type not set    Type not set
+8               rate=6.75   Type set        Type set
+9               rate=30.50  Type not set    Type not set
+10              rate=30.51  Type not set    Type not set
+11              rate=-100   Type not set    Type not set
+12              rate=100    Type not set    Type not set
+13              hours=-1    Type not set    Type not set
+14              hours=0     Type not set    Type not set
+15              hours=1     Type set        Type set
+16              hours=59    Type set        Type set
+17              hours=60    Type set        Type set
+18              hours=61    Type not set    Type not set
+19              hours=-100  Type not set    Type not set
+20              hours=100   Type not set    Type not set
 */
