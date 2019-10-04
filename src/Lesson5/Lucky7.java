@@ -10,12 +10,13 @@ public class Lucky7 {
         Dice d2 = new Dice();
         int money=0 , maxmoney=0 ;
         int tries = 0, besttry =0;
-/*
+        
+
         while (true) {
             System.out.print("Enter the amount of money you want to gamble (integers only): ");
             try {
                 money = s.nextInt();
-                maxmoney = s.nextInt();
+                maxmoney = money;
             } catch (Exception e) {
                 System.out.println("Error - Must enter integers only.");
                 s.nextLine();
@@ -26,16 +27,12 @@ public class Lucky7 {
             }
              else break;
         }
-*/
-       System.out.print("Enter the amount of money you want to gamble: ");
-            
-                money = s.nextInt();
-                maxmoney = s.nextInt();
-        while (true){
+    
+        while (money!=0){
             d1.roll();
             d2.roll();
             tries++;
-            int total = d1.getValue() + d2.getValue();
+            int total = d1.getValue() + d2.getValue();           
 
                 if (total != 7) {
                     money-=1;
@@ -45,7 +42,7 @@ public class Lucky7 {
                 }
                 
                 if (money > maxmoney) {
-                    money = maxmoney;
+                    maxmoney = money;
                     besttry = tries;
                 }
                 if (money == 0) {
